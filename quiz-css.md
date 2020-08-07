@@ -29,7 +29,18 @@ Demo 代码可以新建一个或多个文件（不限），
   flex-grow: 1;
 }
 ```
-
+答：
+```css
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.container > div:nth-child(1) {
+  flex-grow: 1;
+}
+```
 ## Q2
 
 你用过哪些 CSS 的方法论和工具  
@@ -44,4 +55,11 @@ Demo 代码可以新建一个或多个文件（不限），
 > }
 > ```
 
-答：
+答：可以使用类名来扩展基础对象，形如↓：
+> ```css
+> .div {}
+> .div-red{}
+> .table{}
+> .table-red{}
+> 
+> ```
