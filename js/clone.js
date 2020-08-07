@@ -3,7 +3,21 @@
 
 // * ---------------- 解决下文中缺少 clone 函数的问题……
 // 在这里写代码……
-
+function clone(obj){
+    let demo = null;
+    if(obj instanceof Array){
+        demo = obj.concat();
+    }else if(obj instanceof Function){
+        demo = obj;
+    }else{
+        demo = new Object();
+        for(let item in obj){
+            let val = obj[item];
+            demo[item] = typeof val == 'object'?clone(val):val;
+        }
+    }
+    return demo;
+}
 // * ---------------- 实现的效果：
 
 {
