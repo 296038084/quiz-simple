@@ -3,6 +3,12 @@
 
 // * ---------------- 请补充……
 
+{
+  type e = {
+    date:object;
+  }
+}
+
 const getData = async () =>
   await fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => response.json());
 
